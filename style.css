@@ -31,18 +31,30 @@ nav {
   background: var(--secondary-color);
   grid-area: nav;
   border: 1px solid var(--border-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 #profile {
   background: var(--secondary-color);
   grid-area: profile;
   border: 1px solid var(--border-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 #contentLeft {
   background: var(--secondary-dark-shade);
   grid-area: content1;
+  padding: 5px;
   border: 1px solid var(--border-color);
+}
+
+#contentLeft > input {
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 #contentRight {
@@ -54,6 +66,29 @@ nav {
 #message-input-box {
   background: var(--secondary-dark-shade);
   grid-area: mib;
+  padding: 5px;
+  display: flex;
+}
+
+#message-input-box > button {
+  margin: 0 0 0 5px;
+  padding: 5px 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid var(--secondary-dark-shade);
+  background: var(--secondary-color);
+  border-radius: 4px;
+  padding: 8px 8px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px 0 var(--primary-color);
 }
 
 #chat-list {
@@ -81,13 +116,18 @@ nav {
   display: grid;
   height: 80px;
   padding: 10px 5px;
-  margin: 5px;
   grid-template-columns: 2fr 8fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "chatItemImg chatItemName"
     "chatItemImg chatItemMsg";
   border: 1px solid var(--border-color);
+  align-items: center;
+}
+
+.chat-item > p {
+  align-items: center;
+  justify-content: center;
 }
 
 .chat-item-img {
@@ -102,30 +142,13 @@ nav {
   grid-area: chatItemName;
   min-width: fit-content;
 }
-.chat-item-msg {
-  max-width: 100px;
+.chat-item-message {
   grid-area: chatItemMsg;
+  opacity: 80%;
 }
 .text-nowrap-overflow {
   overflow: hidden;
   white-space: nowrap;
-}
-
-input[type="text"] {
-  width: 80%;
-  border: 1px solid var(--secondary-dark-shade);
-  background: var(--secondary-color);
-  border-radius: 4px;
-  margin: 8px 8px;
-  padding: 8px;
-  outline: none;
-  box-sizing: border-box;
-  transition: 0.3s;
-}
-
-input[type="text"]:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 8px 0 var(--primary-color);
 }
 
 button {
