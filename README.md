@@ -1,3 +1,3 @@
 # web-chat-vanilla-js
 
-Project is live @ 
+Project is live @ https://iamshubhamjangle.github.io/web-chat-vanilla-js/
